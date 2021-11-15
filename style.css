@@ -1,0 +1,314 @@
+.ex-1-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    background-color: #fff;
+    transition: background-color 2s;
+    
+}
+
+.ex-1-square:hover {
+    background-color: red;
+}
+
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: all 2s;
+}
+
+.ex-2-square:active {
+    width: 100%;
+    height: 100px;
+    background: red;
+}
+
+.ex-3-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 0;
+    transition: border-radius .5s;
+    transition-timing-function: ease-in;
+}
+
+.ex-3-square:hover {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+}
+
+.ex-4-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: background-color 1s;
+}
+
+.ex-4-square:hover {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+}
+
+.ex-5-square {
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+    transform: scale(1);
+    transition: transform 1s;
+}
+
+.ex-5-square:hover {
+    transform: scale(2);
+}
+
+.ex-5-square:active {
+    transform: scale(0.5);
+}
+
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+
+}
+
+.ex-6-img:hover {
+    filter: grayscale(1);
+}
+
+.ex-7-img {
+    filter: none;
+    transition: filter 2s;
+}
+
+.ex-7-img:hover {
+    filter: sepia(0.6) grayscale(0.2);
+}
+
+.ex-8-img {
+    filter: none;
+    border-radius: 0;
+    transition: all 2s;
+}
+
+.ex-8-img:hover {
+    filter: saturate(0.3) sepia(0.3) ;
+    border-radius: 20px;
+}
+
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+    border-radius: 0;
+    transform: scale(1);
+    filter: none;
+    transition: all 1s;
+}
+
+.ex-9-img:hover {
+    margin: 50px 100px;
+    width: 400px;
+    transform: scale(1.5);
+    filter: sepia(0.5) grayscale(0.5);
+    border-radius: 20px;
+}
+
+.ex-10-icon {
+    font-size: 60px;
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ex-11-icon {
+    font-size: 60px;
+}
+
+.ex-11-icon:hover {
+    font-size: 60px;
+    animation-name: rotation-2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation-2 {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    80%{
+        transform: rotate(270deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+    transition: all 1s;
+}
+
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+
+.ex-12-button:hover .ex-12-top-white{
+    animation-name: topButton-1;
+    animation-duration: 2s;
+}
+
+@keyframes topButton-1 {
+    0%{
+        top: -10px;
+        left: 10%;
+    }
+
+    50%{
+        top: -10px;
+        left: calc(100% - 60px);
+    }
+
+    100%{
+        top: -10px;
+        left: 10%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation-name: bottomButton-1;
+    animation-duration: 2s;
+}
+
+@keyframes bottomButton-1 {
+    0%{
+        bottom: -10px;
+        right: 20%;
+    }
+
+    50%{
+        bottom: -10px;
+        right: calc(100% - 60px);
+    }
+
+    100%{
+        bottom: -10px;
+        right: 20%;
+    }
+}
+
+.ex-13-button:hover .ex-13-top-white{
+    animation-name: topButton-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes topButton-2 {
+    0%{
+        top: -10px;
+        left: 10%;
+    }
+
+    25%{
+        top: -10px;
+        left: calc(100% - 30px);
+    }
+
+    40%{
+        top: 100%;
+        left: calc(100% - 30px);
+    }
+
+    65%{
+        top: 100%;
+        left: calc(0% - 30%);
+    }
+
+    80%{
+        top: -10px;
+        left: calc(0% - 30%);
+    }
+
+    100%{
+        top: -10px;
+        left: 10%;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white{
+    animation-name: bottomButton-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes bottomButton-2 {
+    0%{
+        bottom: -10px;
+        right: 20%;
+    }
+
+    25%{
+        bottom: -10px;
+        right: calc(100% - 30px);
+    }
+
+    40%{
+        bottom: 100%;
+        right: calc(100% - 30px);
+    }
+
+    65%{
+        bottom: 100%;
+        right: calc(0% - 30%);
+    }
+
+    80%{
+        bottom: -10px;
+        right: calc(0% - 30%);
+    }
+
+    100%{
+        bottom: -10px;
+        right: 20%;
+    }
+}
